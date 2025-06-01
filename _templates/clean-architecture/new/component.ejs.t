@@ -1,9 +1,9 @@
 ---
 to: src/controller/<%= name %>/<%= component %>Controller.ts
 ---
-import { <%= component %>Dto } from '../../dto/<%= name %>/<%= component %>Dto';
-import { <%= component %>Gateway } from '../../gateway/<%= name %>/<%= component %>Gateway';
-import { <%= component %>ViewModel } from '../../view-model/<%= name %>/<%= component %>ViewModel';
+import { <%= component %>Dto } from '@/dto/<%= name %>/<%= component %>Dto';
+import { <%= component %>Gateway } from '@/gateway/<%= name %>/<%= component %>Gateway';
+import { <%= component %>ViewModel } from '@/view-model/<%= name %>/<%= component %>ViewModel';
 
 export class <%= component %>Controller {
   private gateway: <%= component %>Gateway;
