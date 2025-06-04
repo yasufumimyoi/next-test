@@ -9,6 +9,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { ContactForm } from "./components/ContactForm";
 
 export default function Home() {
   return (
@@ -67,19 +68,14 @@ export default function Home() {
           </DialogTrigger>
           <DialogContent className="sm:max-w-[425px]">
             <DialogHeader>
-              <DialogTitle>ダイアログのタイトル</DialogTitle>
+              <DialogTitle>お問い合わせ</DialogTitle>
               <DialogDescription>
-                ここにダイアログの説明文を入れることができます。
+                以下のフォームに必要事項を入力してください。
               </DialogDescription>
             </DialogHeader>
-            <div className="grid gap-4 py-4">
-              <div className="grid grid-cols-4 items-center gap-4">
-                コンテンツをここに配置できます
-              </div>
+            <div className="py-4">
+              <ContactForm />
             </div>
-            <DialogFooter>
-              <Button type="submit">保存</Button>
-            </DialogFooter>
           </DialogContent>
         </Dialog>
       </main>
