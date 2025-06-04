@@ -1,4 +1,14 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 export default function Home() {
   return (
@@ -50,6 +60,28 @@ export default function Home() {
             Read our docs
           </a>
         </div>
+
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button variant="outline">ダイアログを開く</Button>
+          </DialogTrigger>
+          <DialogContent className="sm:max-w-[425px]">
+            <DialogHeader>
+              <DialogTitle>ダイアログのタイトル</DialogTitle>
+              <DialogDescription>
+                ここにダイアログの説明文を入れることができます。
+              </DialogDescription>
+            </DialogHeader>
+            <div className="grid gap-4 py-4">
+              <div className="grid grid-cols-4 items-center gap-4">
+                コンテンツをここに配置できます
+              </div>
+            </div>
+            <DialogFooter>
+              <Button type="submit">保存</Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
